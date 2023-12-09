@@ -10,11 +10,7 @@ export const Navbar = () => {
       <Link to="/" className="title">
         Website
       </Link>
-      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}></div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
           <NavLink to="/about">Acerca</NavLink>
