@@ -35,7 +35,7 @@ export const Data = [
 		quantity: 1,
 	},
 	{
-		id: 5,
+		id: 6,
 		img: 'https://i.linio.com/p/5e9950cc340c5289ff8012afc37da256-product.webp',
 		nameProduct: 'Audifonos',
 		price: 20,
