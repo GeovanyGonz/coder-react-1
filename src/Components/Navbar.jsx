@@ -13,13 +13,13 @@ export const Navbar = () => {
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}></div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <NavLink to="/about">Acerca</NavLink>
+          <NavLink to="/Tenis">TENIS</NavLink>
         </li>
         <li>
-          <NavLink to="/services">Productos</NavLink>
+          <NavLink to="/Tecnologias">TECNOLOGIAS</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contactanos</NavLink>
+          <NavLink to="/Lociones">LOCIONES</NavLink>
         </li>
       </ul>
     </nav>

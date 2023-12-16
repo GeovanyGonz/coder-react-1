@@ -1,13 +1,12 @@
 import React from 'react'
 
-export const Contact = () => {
+export const Tecnologias = () => {
   return (
     <div>
       <div>
-        <h1>CONTACTANOS</h1>
       </div>
     </div>
   )
 }
 
-export default Contact;
+export default Tecnologias;

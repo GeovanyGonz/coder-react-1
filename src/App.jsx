@@ -5,9 +5,9 @@ import './App.css';
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Pages/Home";
-import Services from "./Components/Pages/Services";
-import About from "./Components/Pages/About";
-import Contact from "./Components/Pages/Contact";
+import Tecnologias from "./Components/pages/Tecnologias.jsx";
+import Tenis from "./Components/pages/Tenis";
+import Lociones from "./Components/pages/Lociones";
 import Carrito from "./Components/CartWidget/index"
 
 function App() {
@@ -23,9 +23,9 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="Tenis" element={<Tenis />} />
+      <Route path="/Tecnologias" element={<Tecnologias />} />
+      <Route path="/Lociones" element={<Lociones />} />
       <Route path="/carrito" element={<Carrito />} />
     </Routes>
   </div>   
