@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import "./Navbar.css";
+import CartWidget from './CartWidget/CartWidget';
 
-export const Header = ({
+export const Cart = ({
 	allProducts, 
 	setAllProducts, 
 	total, 
@@ -12,6 +12,7 @@ export const Header = ({
 
     const [active, setActive] = useState(false);
 
+	console.log(allProducts.products)
 
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
@@ -30,9 +31,8 @@ export const Header = ({
 	};
 
     return (
-        <header>
-			 
-			<h1>Tienda</h1>
+	   <> 
+	   	<CartWidget />
 
 			<div className="container-icon">
 				<div className="container-cart-icon" onClick={() => setActive(!active)}>
@@ -51,18 +51,17 @@ export const Header = ({
 						/>
 					</svg>
 
-
 					<div className="count-products">
-						<span id="contador-productos">{countProducts}</span>
+						<span id="contador-productos">{allProducts?.products?.length}</span>
 					</div>
 				</div>
 
 				<div className={`container-cart-products ${active ? '' : 'hidden-cart'}`}>
 					{
-						allProducts.length ? (
+						allProducts.products?.length ? (
 					<>
 						<div className="row-product">
-							{allProducts.map(product => (
+							{allProducts.products.map(product => (
 								<div className="cart-product" key={product.id}>
 									<div className="info-cart-product">
 									   <span className="cantidad-producto-carrito">
@@ -110,8 +109,9 @@ export const Header = ({
 					
 				</div>
 			</div>
-		</header>
+	</>
+		
     );
 };
 
-export default Header;
+export default Cart;

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
+import Cart from "./Cart";
 
-export const Navbar = () => {
+export const Navbar = (products) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -22,6 +23,11 @@ export const Navbar = () => {
           <NavLink to="/Lociones">LOCIONES</NavLink>
         </li>
       </ul>
+      <li>
+          <NavLink to="./Cart">
+             <Cart allProducts={products}/>
+          </NavLink>
+      </li>
     </nav>
   );
 };
